@@ -3,17 +3,119 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CHANDRA PRIYA J – Faculty Site</title>
+<title>CHANDRA PRIYA J – Research &amp; Faculty Profile</title>
 <meta name="description" content="Faculty site of CHANDRA PRIYA J, Assistant Professor, Department of Computer Science and Engineering, NIT Tiruchirappalli.">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 body{margin:0}
 a:hover{text-decoration:underline}
 a:focus-visible{outline:3px solid #E8A33D;outline-offset:3px}
+/* Research-forward visual system */
+:root{color-scheme:light;--ink:#15253b;--navy:#0b1f3a;--blue:#174b78;--muted:#64748b;--line:#dbe4ee;--paper:#f3f7fb;--gold:#edb45b;--white:#fff}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Public Sans",system-ui,sans-serif}
+*{box-sizing:border-box}
+.site-shell{background:#fff!important;color:var(--ink)!important;line-height:1.65!important;font-size:16px!important;overflow:hidden}
+.site-shell a{transition:color .18s ease,background-color .18s ease,border-color .18s ease,transform .18s ease}
+.site-shell a:focus-visible{outline:3px solid var(--gold);outline-offset:4px;border-radius:4px}
+#top{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 82% 16%,rgba(37,106,155,.42),transparent 34%),linear-gradient(125deg,#07172c 0%,#0b1f3a 58%,#112f52 100%)!important;color:#fff!important}
+#top:after{content:"";position:absolute;z-index:-1;inset:0 0 0 auto;width:min(48vw,700px);opacity:.16;background-image:radial-gradient(circle at 20px 20px,rgba(255,255,255,.8) 1.4px,transparent 1.8px),linear-gradient(30deg,transparent 49.7%,rgba(160,195,220,.6) 50%,transparent 50.3%),linear-gradient(150deg,transparent 49.7%,rgba(160,195,220,.55) 50%,transparent 50.3%);background-size:90px 78px,90px 78px,90px 78px;mask-image:linear-gradient(to left,#000,transparent)}
+#top>div{position:relative;z-index:1;max-width:1220px!important;padding-left:clamp(18px,5vw,64px)!important;padding-right:clamp(18px,5vw,64px)!important}
+#top>div>div:first-child{min-height:60px;padding:8px 0!important;border-bottom-color:rgba(255,255,255,.17)!important}
+#top nav{gap:3px!important}
+#top nav a{padding:0 9px!important;border-radius:6px;color:#dbe7f5!important;font-size:13px!important}
+#top nav a:hover{background:rgba(255,255,255,.1);color:#fff!important;text-decoration:none}
+#top>div>div:nth-child(2){gap:clamp(36px,7vw,92px)!important;padding:clamp(54px,8vw,94px) 0 clamp(62px,8vw,92px)!important}
+#top h1{font-size:clamp(44px,7.2vw,82px)!important;letter-spacing:-.045em!important;line-height:.98!important}
+#top h1+p{font-size:clamp(18px,2vw,22px)!important;color:#eef4fb!important}
+#top p{max-width:690px}
+#top>div>div:nth-child(2)>div:first-child>p:nth-of-type(4){font-size:clamp(16px,1.6vw,18px)!important;color:#d6e2f0!important}
+#top span{border-color:rgba(218,232,248,.27)!important;border-radius:999px!important;background:rgba(255,255,255,.045)}
+#top a[href^="mailto:"]{border-radius:7px!important;background:var(--gold)!important;color:#10223a!important;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+#top a[href="#outcomes"]{border-radius:7px!important;background:rgba(255,255,255,.07)}
+#top a[href*="linkedin.com"]{border-radius:7px!important;background:rgba(255,255,255,.04)}
+#top a[href="#outcomes"]:hover,#top a[href*="linkedin.com"]:hover{transform:translateY(-2px);text-decoration:none;background-color:rgba(255,255,255,.14)}
+.people-outcome-link{margin:9px 0 0!important;font-size:12px!important;font-weight:700!important}
+.people-outcome-link a{color:#205d88!important;text-decoration:none}
+.people-outcome-link a:hover{text-decoration:underline}
+#outcomes article[id]{scroll-margin-top:20px}
+#top a[href^="mailto:"]:hover,#top a[href="#outcomes"]:hover{transform:translateY(-2px);text-decoration:none}
+#top>div>div:nth-child(2)>div:last-child>div{border-radius:14px!important;border-color:rgba(255,255,255,.2)!important;box-shadow:0 24px 70px rgba(0,0,0,.25)}
+#top img{display:block}
+.profile-fallback{width:100%;height:100%;min-height:300px;flex-direction:column;justify-content:center;align-items:center;gap:12px;background:radial-gradient(circle at 50% 40%,#28547a,#102744 65%);color:#fff}
+.profile-fallback:not([hidden]){display:flex}
+.profile-fallback span{display:grid;place-items:center;width:112px;height:112px;border:1px solid rgba(255,255,255,.42);border-radius:50%;font:500 48px Newsreader,Georgia,serif;color:#f4c878}
+.profile-fallback small{color:#d3e1f0;letter-spacing:.04em}
+.site-shell section[id]:not(#contact){padding:clamp(56px,7.4vw,92px) 0!important;scroll-margin-top:20px}
+section[aria-label="Research at a glance"]{padding:24px 0!important;background:#fff!important;border-bottom:1px solid var(--line)}
+section[aria-label="Research at a glance"]>div{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));gap:0!important;max-width:1220px!important;padding-left:clamp(18px,5vw,64px)!important;padding-right:clamp(18px,5vw,64px)!important}
+section[aria-label="Research at a glance"]>div>div{min-width:0;padding:12px 18px;border-left:1px solid var(--line)}
+section[aria-label="Research at a glance"]>div>div:first-child{border-left:0}
+section[aria-label="Research at a glance"]>div>div>div:first-child{font:500 44px/1 Newsreader,Georgia,serif!important;color:var(--navy)!important}
+section[aria-label="Research at a glance"]>div>div>p{margin:8px 0 0!important;color:#607187!important;font-size:12px!important;line-height:1.45!important}
+.stat-item{flex:1 1 0!important}
+.stat-value{font:500 44px/1 Newsreader,Georgia,serif;color:var(--navy)}
+#about,#publications,#career,#talks,#service{background:#fff!important}
+#research,#patents,#recognition,#mentoring{background:var(--paper)!important}
+#about>div,#research>div,#publications>div,#patents>div,#career>div,#recognition>div,#talks>div,#mentoring>div,#service>div{display:grid!important;grid-template-columns:minmax(170px,.62fr) minmax(0,2fr)!important;align-items:start!important;gap:clamp(30px,5.5vw,76px)!important;max-width:1220px!important;padding-left:clamp(18px,5vw,64px)!important;padding-right:clamp(18px,5vw,64px)!important}
+.site-shell section[id]:not(#contact) h2{font:500 clamp(32px,4vw,42px)/1.08 Newsreader,Georgia,serif!important;letter-spacing:-.025em;color:var(--navy)!important}
+.site-shell section[id]:not(#contact) h3,.site-shell section[id]:not(#contact) h4{letter-spacing:-.018em}
+#about p,#research p,#publications p,#mentoring p{color:#52647b}
+#about>div>div:nth-child(2)>p:first-child,#about>div>div:nth-child(2)>p:nth-child(2){font-size:17px!important;line-height:1.75!important;color:#263b54}
+#research>div>div:nth-child(2)>div:first-child{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px!important}
+#research>div>div:nth-child(2)>div:first-child>div{border:1px solid var(--line)!important;border-radius:12px!important;padding:24px!important;box-shadow:0 5px 22px rgba(20,45,75,.035);transition:transform .18s ease,box-shadow .18s ease}
+#research>div>div:nth-child(2)>div:first-child>div:hover{transform:translateY(-3px);box-shadow:0 15px 34px rgba(20,45,75,.09)}
+#research h3{font:500 22px/1.2 Newsreader,Georgia,serif!important;color:var(--navy)!important}
+#research>div>div:nth-child(2)>div:last-child{border-radius:13px!important;background:linear-gradient(120deg,#0b1f3a,#143b62)!important;padding:clamp(24px,4vw,38px)!important}
+#research>div>div:nth-child(2)>div:last-child h3{font-size:clamp(26px,3vw,34px)!important;color:#fff!important}
+#research>div>div:nth-child(2)>div:last-child p{color:#d9e5f2!important}
+#publications>div>div:nth-child(2)>div:nth-child(n+2){border:0!important;border-bottom:1px solid var(--line)!important;padding:20px 14px!important;transition:background .18s ease}
+#publications>div>div:nth-child(2)>div:nth-child(n+2):hover{background:#f5f8fc}
+#publications h3{font:500 20px/1.3 Newsreader,Georgia,serif!important}
+#publications>div>div:nth-child(2)>div:first-child{padding-bottom:22px;margin-bottom:14px!important;border-bottom:1px solid var(--line)}
+#patents>div>div:nth-child(2)>div,#career>div>div:nth-child(2)>div,#recognition>div>div:nth-child(2)>div,#talks>div>div:nth-child(2)>div,#service>div>div:nth-child(2)>div{border-color:var(--line)!important}
+#mentoring>div>div:nth-child(2)>div{border-color:var(--line)!important}
+#mentoring h3{margin-top:30px!important;margin-bottom:10px!important;color:#48627e!important;font-size:12px!important;letter-spacing:.13em!important}
+#mentoring>div>div:nth-child(2)>h3:first-child{margin-top:0!important}
+#mentoring .people-record{align-items:flex-start!important;padding:17px 19px!important;margin:8px 0 0;border:1px solid #dbe4ee!important;border-radius:10px;background:#fff;box-shadow:0 5px 18px rgba(21,48,77,.035);transition:transform .18s ease,box-shadow .18s ease}
+#mentoring .people-record:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(21,48,77,.08)}
+#mentoring .people-record h4{font-size:20px!important;color:#173451!important}
+#mentoring .people-record p{line-height:1.5}
+#contact{background:linear-gradient(125deg,#07172c,#0d2a49)!important;padding:68px 0 32px!important;color:#fff!important}
+#contact>div{max-width:1220px!important;padding-left:clamp(18px,5vw,64px)!important;padding-right:clamp(18px,5vw,64px)!important}
+#contact h2{font:500 clamp(32px,4vw,42px)/1.08 Newsreader,Georgia,serif!important}
+#contact a{color:#f4c878!important}
+#contact>div>div:last-child{border-top-color:rgba(255,255,255,.18)!important}
+#outcomes{background:linear-gradient(180deg,#f2f6fb 0%,#eaf1f8 100%)!important}
+#outcomes .outcomes-wrap{display:block!important;max-width:1220px!important;margin:0 auto!important;padding:0 clamp(18px,5vw,64px)!important}
+.outcomes-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:30px}
+.outcomes-heading>div:first-child{max-width:760px}
+.section-rule{width:42px;height:3px;margin-bottom:15px;background:var(--gold)}
+.eyebrow{margin:0 0 8px!important;color:#47617f!important;font-size:12px!important;font-weight:700!important;letter-spacing:.14em;text-transform:uppercase}
+#outcomes h2{margin:0!important;font:500 clamp(36px,4.5vw,52px)/1.04 Newsreader,Georgia,serif!important;letter-spacing:-.035em;color:var(--navy)!important}
+.outcomes-summary{max-width:700px;margin:14px 0 0;color:#52647b;font-size:16px;line-height:1.7}
+.outcomes-total{display:flex;align-items:baseline;gap:11px;white-space:nowrap;color:#52647b;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+.outcomes-total strong{font:500 52px/.9 Newsreader,Georgia,serif;color:#bd7e22;letter-spacing:-.04em}
+.outcomes-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.outcome-card{position:relative;display:flex;flex-direction:column;min-width:0;padding:25px 23px 22px;border:1px solid #d6e0eb;border-radius:13px;background:rgba(255,255,255,.94);box-shadow:0 10px 30px rgba(24,52,83,.045);overflow:hidden;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.outcome-card:before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#d8993f,#4c88b2 62%,transparent)}
+.outcome-card:hover{transform:translateY(-4px);border-color:#b7cadc;box-shadow:0 18px 40px rgba(24,52,83,.11)}
+.outcome-topline{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:21px}
+.outcome-index{font:500 17px Newsreader,Georgia,serif;color:#bd7e22}
+.outcome-domain{color:#61758e;font-size:10px;font-weight:700;letter-spacing:.075em;text-align:right;text-transform:uppercase}
+.outcome-card h3{margin:0;color:#142a45;font:500 22px/1.24 Newsreader,Georgia,serif;letter-spacing:-.02em}
+.outcome-author{margin:16px 0 20px;color:#27506e;font-size:14px;font-weight:700}
+.outcome-meta{display:grid;grid-template-columns:74px minmax(0,1fr);gap:8px;padding:11px 0;border-top:1px solid #e7edf3;color:#445a72;font-size:12px;line-height:1.5}
+.meta-label{color:#7b899a;font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+.outcome-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:17px}
+.outcome-tags span{padding:5px 8px;border:1px solid #dce6ef;border-radius:999px;background:#f4f8fb;color:#3d5874;font-size:10px;font-weight:600;line-height:1.2}
+@media(max-width:960px){section[aria-label="Research at a glance"]>div{grid-template-columns:repeat(3,minmax(0,1fr))}section[aria-label="Research at a glance"]>div>div:nth-child(4){border-left:0}#top nav a{padding:0 7px!important;font-size:12px!important}.outcomes-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.outcome-card:last-child{grid-column:1/-1}#about>div,#research>div,#publications>div,#patents>div,#career>div,#recognition>div,#talks>div,#mentoring>div,#service>div{grid-template-columns:minmax(145px,.5fr) minmax(0,2fr)!important}}
+@media(max-width:700px){section[aria-label="Research at a glance"]>div{grid-template-columns:repeat(2,minmax(0,1fr))}section[aria-label="Research at a glance"]>div>div:nth-child(odd){border-left:0}#top>div>div:first-child{align-items:flex-start!important;flex-direction:column;padding-top:12px!important}#top nav{width:100%;max-width:100%;flex-wrap:nowrap!important;overflow-x:auto;scrollbar-width:thin;padding-bottom:3px}#top nav a{white-space:nowrap;flex:0 0 auto}#top>div>div:nth-child(2){gap:28px!important;padding-top:48px!important}#top>div>div:nth-child(2)>div:last-child{max-width:260px!important}.site-shell section[id]:not(#contact){padding:58px 0!important}#about>div,#research>div,#publications>div,#patents>div,#career>div,#recognition>div,#talks>div,#mentoring>div,#service>div{display:flex!important;flex-direction:column!important;gap:22px!important}#research>div>div:nth-child(2){width:100%}#research>div>div:nth-child(2)>div:first-child{grid-template-columns:1fr}.outcomes-heading{align-items:flex-start;flex-direction:column;gap:18px}.outcomes-grid{grid-template-columns:1fr}.outcome-card:last-child{grid-column:auto}.outcome-card{padding:23px 20px}.outcome-card h3{font-size:21px}}
+@media(max-width:420px){#top h1{font-size:42px!important}.outcomes-total strong{font-size:44px}.outcome-meta{grid-template-columns:62px minmax(0,1fr)}.outcome-domain{font-size:9px}}
 </style>
 </head>
 <body>
-<div style="font-family: 'Public Sans', system-ui, sans-serif; color: #1B2B40; background: #FFFFFF; line-height: 1.6; font-size: 16px">
+<div class="site-shell" style="font-family: 'Public Sans', system-ui, sans-serif; color: #1B2B40; background: #FFFFFF; line-height: 1.6; font-size: 16px">
 
 <!-- HERO -->
 <header id="top" style="background: #0B1F3A; color: #FFFFFF">
@@ -21,14 +123,16 @@ a:focus-visible{outline:3px solid #E8A33D;outline-offset:3px}
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 24px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.16)">
 <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.02em">NIT Tiruchirappalli · Department of CSE</div>
 <nav aria-label="Page sections" style="display: flex; flex-wrap: wrap; gap: 0 2px">
+<a href="#mentoring" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #E8EEF7; text-decoration: none; font-size: 14px">People</a>
 <a href="#about" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #E8EEF7; text-decoration: none; font-size: 14px">About</a>
 <a href="#research" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #E8EEF7; text-decoration: none; font-size: 14px">Research</a>
+<a href="#outcomes" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #E8EEF7; text-decoration: none; font-size: 14px">Outcomes</a>
 <a href="#publications" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #E8EEF7; text-decoration: none; font-size: 14px">Publications</a>
 <a href="#patents" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #E8EEF7; text-decoration: none; font-size: 14px">Patents</a>
 <a href="#career" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #E8EEF7; text-decoration: none; font-size: 14px">Career</a>
 <a href="#recognition" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #E8EEF7; text-decoration: none; font-size: 14px">Recognition</a>
 <a href="#talks" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #E8EEF7; text-decoration: none; font-size: 14px">Talks</a>
-<a href="#mentoring" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #E8EEF7; text-decoration: none; font-size: 14px">Mentoring</a>
+
 <a href="#service" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #E8EEF7; text-decoration: none; font-size: 14px">Service</a>
 <a href="#contact" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #E8EEF7; text-decoration: none; font-size: 14px">Contact</a>
 </nav>
@@ -41,7 +145,7 @@ a:focus-visible{outline:3px solid #E8A33D;outline-offset:3px}
 <h1 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: clamp(44px, 7vw, 76px); line-height: 1.05; letter-spacing: -0.01em">CHANDRA PRIYA J</h1>
 <p style="margin: 16px 0 0; font-size: 20px; line-height: 1.4; color: #E8EEF7">Assistant Professor, Department of Computer Science and Engineering</p>
 <p style="margin: 4px 0 0; font-size: 16px; color: #C9D6EA">National Institute of Technology Tiruchirappalli · M.E., Ph.D.</p>
-<p style="margin: 28px 0 0; max-width: 620px; font-size: 18px; line-height: 1.65; color: #E8EEF7">Research in cryptography and network security, distributed systems security, IoT data security and privacy, and consensus protocol design. Leads the Decentralized AI and Trust Systems (DATS) Lab.</p>
+<p style="margin: 28px 0 0; max-width: 620px; font-size: 18px; line-height: 1.65; color: #E8EEF7">My group develops fault-tolerant and privacy-preserving distributed AI systems, combining federated learning, blockchain ledgers, IoT telemetry, and consensus design. I lead the Decentralized AI and Trust Systems (DATS) Lab.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px">
 <span style="display: inline-block; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.32); border-radius: 4px; font-size: 13px; color: #E8EEF7">Cryptography and Network Security</span>
 <span style="display: inline-block; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.32); border-radius: 4px; font-size: 13px; color: #E8EEF7">Distributed Systems Security</span>
@@ -50,12 +154,13 @@ a:focus-visible{outline:3px solid #E8A33D;outline-offset:3px}
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px">
 <a href="mailto:jchandrapriya@nitt.edu" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 4px; font-weight: 600; text-decoration: none; color: #0B1F3A; background: #E8A33D">Email CHANDRA PRIYA J</a>
-<a href="#publications" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 1px solid rgba(255,255,255,0.5); border-radius: 4px; font-weight: 600; text-decoration: none; color: #FFFFFF">Selected publications</a>
+<a href="#outcomes" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 1px solid rgba(255,255,255,0.5); border-radius: 4px; font-weight: 600; text-decoration: none; color: #FFFFFF">Student research outcomes</a>
+<a href="https://www.linkedin.com/in/dr-chandra-priya-jayabal-14555882/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" aria-label="Open CHANDRA PRIYA J on LinkedIn" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1px solid rgba(255,255,255,0.5); border-radius: 4px; font-weight: 600; text-decoration: none; color: #FFFFFF">LinkedIn profile ↗</a>
 </div>
 </div>
 <div style="flex: 0 1 300px; min-width: 0; width: 100%; max-width: 300px">
 <div style="aspect-ratio: 4 / 5; display: flex; align-items: center; justify-content: center; background: #13305A; border: 1px solid rgba(255,255,255,0.18); border-radius: 4px; overflow: hidden;">
-<img src="profile-photo.jpg.png" alt="CHANDRA PRIYA J" style="width: 100%; height: 100%; object-fit: cover;">
+<img src="profile-photo.jpg.png" alt="CHANDRA PRIYA J" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="profile-fallback" role="img" aria-label="Portrait placeholder for CHANDRA PRIYA J" hidden><span>CP</span><small>DATS Lab · NIT Tiruchirappalli</small></div>
 </div>
 <p style="margin: 12px 0 0; font-size: 14px; color: #C9D6EA">Room 309, Second Floor, Department of CSE</p>
 </div>
@@ -82,8 +187,131 @@ a:focus-visible{outline:3px solid #E8A33D;outline-offset:3px}
 <div style="font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 56px; line-height: 1; color: #0B1F3A">11</div>
 <p style="margin: 8px 0 0; font-size: 15px; color: #4A5A70">Invited lectures at institutes across India</p>
 </div>
+<div class="stat-item">
+<div class="stat-value">3</div>
+<p>Student research outcomes at international conferences</p>
+</div></div>
+</section>
+
+  <!-- MENTORING -->
+<section id="mentoring" style="background: #F2F5F9; padding: 80px 0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 32px 64px">
+<div style="flex: 1 1 220px; min-width: 0">
+<div style="width: 40px; height: 3px; margin-bottom: 16px; background: #E8A33D"></div>
+<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 36px; line-height: 1.15; color: #0B1F3A">People & DATS Lab</h2>
+<p style="margin: 12px 0 0; font-size: 15px; color: #4A5A70">The DATS Lab brings together doctoral researchers, postgraduate scholars, and interns. Their projects span fault-tolerant federated learning, privacy-preserving drug discovery, decentralized AI, compiler optimization, and secure IoT systems.</p>
+</div>
+<div style="flex: 3 1 520px; min-width: 0">
+<h3 style="margin: 0 0 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #4A5A70">Ph.D. Scholars</h3>
+<div class="people-record" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding: 16px 0; border-top: 1px solid #D5DDE8">
+<div style="flex: 1 1 260px; min-width: 0; font-weight: 600; color: #0B1F3A">K J Shruthikeerthi (Roll No: 406126005) — Enrolled 2026</div>
+<span style="display: inline-block; padding: 4px 10px; background: #E1EEFB; color: #0F4C8A; font-size: 12px; font-weight: 600; border-radius: 4px">Ongoing</span>
+</div>
+<div class="people-record" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding: 16px 0; border-top: 1px solid #D5DDE8; border-bottom: 1px solid #D5DDE8">
+<div style="flex: 1 1 260px; min-width: 0; font-weight: 600; color: #0B1F3A">Anusri P (Roll No: 406326001) — Enrolled 2026</div>
+<span style="display: inline-block; padding: 4px 10px; background: #E1EEFB; color: #0F4C8A; font-size: 12px; font-weight: 600; border-radius: 4px">Ongoing</span>
+</div>
+
+<h3 style="margin: 40px 0 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #4A5A70">Postgraduate Scholars</h3>
+<div class="people-record" style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
+<div style="flex: 1 1 300px; min-width: 0">
+<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Anoop Kumar</h4>
+<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Research topic: Fault Tolerant Decentralized Asynchronous Federated Learning with Ledger-Verifiable Termination · (Roll No: 206124005)</p>
+</div>
+<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E3F3E6; color: #1F6B34; font-size: 12px; font-weight: 600; border-radius: 4px">Completed</span></div>
+</div>
+<div class="people-record" style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
+<div style="flex: 1 1 300px; min-width: 0">
+<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Satyam Singh Kumre</h4>
+<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Research topic: Intelligent Multi-objective and Preference-Aware LLVM Compiler Optimization via Hybrid Machine Learning and Graph-Enhanced Program Representations · (Roll No: 206124027)</p>
+</div>
+<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E3F3E6; color: #1F6B34; font-size: 12px; font-weight: 600; border-radius: 4px">Completed</span></div>
+</div>
+<div class="people-record" style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8; border-bottom: 1px solid #D5DDE8">
+<div style="flex: 1 1 300px; min-width: 0">
+<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Vignesh S</h4>
+<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Research topic: Dynamic Federated Learning with Model Versioning and Efficient Client Unlearning · (Roll No: 206125031)</p>
+</div>
+<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E1EEFB; color: #0F4C8A; font-size: 12px; font-weight: 600; border-radius: 4px">Ongoing</span></div>
+</div>
+<h3 style="margin: 40px 0 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #4A5A70">Research Interns</h3>
+<div class="people-record" style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
+<div style="flex: 1 1 300px; min-width: 0">
+<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Shyam Sundar Raju</h4>
+<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Research project: IoT security with Hyperledger Fabric</p><p style="margin: 2px 0 0; font-size: 14px; color: #607187">School of Computing, Amrita Vishwa Vidyapeetham, Coimbatore</p>
+<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color:#4A5A70">18.05.2026 – 16.06.2026</p><p class="people-outcome-link"><a href="#outcome-shyam">See conference outcome <span aria-hidden="true">↗</span></a></p>
+</div>
+<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E6EDF7; color: #14407A; font-size: 12px; font-weight: 600; border-radius: 4px">External intern</span></div>
+</div>
+<div class="people-record" style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
+<div style="flex: 1 1 300px; min-width: 0">
+<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Shiven Patro</h4>
+<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Research project: Decentralized Federated Learning for Drug Discovery</p><p style="margin: 2px 0 0; font-size: 14px; color: #607187">Vellore Institute of Technology, Amaravati, Andhra Pradesh</p>
+<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">18.5.2026 – 21.6.2026</p><p class="people-outcome-link"><a href="#outcome-shiven">See conference outcome <span aria-hidden="true">↗</span></a></p>
+</div>
+<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E6EDF7; color: #14407A; font-size: 12px; font-weight: 600; border-radius: 4px">External intern</span></div>
+</div>
+<div class="people-record" style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
+<div style="flex: 1 1 300px; min-width: 0">
+<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Devananditha V</h4>
+<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Research project: Privacy enhancements in Peer-to-Peer Federated Learning</p><p style="margin: 2px 0 0; font-size: 14px; color: #607187">Vellore Institute of Technology, Amaravati, Andhra Pradesh</p>
+<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">18.5.2026 – 20.6.2026</p><p class="people-outcome-link"><a href="#outcome-devananditha">See conference outcome <span aria-hidden="true">↗</span></a></p>
+</div>
+<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E6EDF7; color: #14407A; font-size: 12px; font-weight: 600; border-radius: 4px">External intern</span></div>
+</div>
+<div class="people-record" style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
+<div style="flex: 1 1 300px; min-width: 0">
+<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Yaswant U</h4>
+<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Research project: Decentralized Science (DeSci) with Blockchain</p><p style="margin: 2px 0 0; font-size: 14px; color: #607187">Chennai Institute of Technology, Chennai</p>
+<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">2 months · 04.05.2026 – 04.07.2026</p>
+</div>
+<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E6EDF7; color: #14407A; font-size: 12px; font-weight: 600; border-radius: 4px">External intern</span></div>
+</div>
+<div class="people-record" style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
+<div style="flex: 1 1 300px; min-width: 0">
+<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">RS Sreesudan</h4>
+<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Research project: Fault Tolerance in Federated Machine Learning</p><p style="margin: 2px 0 0; font-size: 14px; color: #607187">Chennai Institute of Technology, Chennai</p>
+<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">2 months · 04.05.2026 – 04.07.2026</p>
+</div>
+<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E6EDF7; color: #14407A; font-size: 12px; font-weight: 600; border-radius: 4px">External intern</span></div>
+</div>
+<div class="people-record" style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
+<div style="flex: 1 1 300px; min-width: 0">
+<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Gaurav Jaiswal</h4>
+<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Research project: Personalized Federated RAG and Intent Learning for a Multilingual Railway Assistant under Non-IID Regional Data</p><p style="margin: 2px 0 0; font-size: 14px; color: #607187">MCA, NIT Tiruchirappalli</p>
+<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">01.05.2026– 30.06.2026</p>
+</div>
+<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E3F3E6; color: #1F6B34; font-size: 12px; font-weight: 600; border-radius: 4px">Internal intern</span></div>
+</div>
+<div class="people-record" style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
+<div style="flex: 1 1 300px; min-width: 0">
+<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Devesh Kashyap</h4>
+<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Research project: Web vulnerability scanner</p><p style="margin: 2px 0 0; font-size: 14px; color: #607187">MCA, NIT Tiruchirappalli</p>
+<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">05.05.2026– 30.06.2026</p>
+</div>
+<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E3F3E6; color: #1F6B34; font-size: 12px; font-weight: 600; border-radius: 4px">Internal intern</span></div>
+</div>
+<div class="people-record" style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
+<div style="flex: 1 1 300px; min-width: 0">
+<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Priyansh Kumar Paswan</h4>
+<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Research project: CodeForge AI: Autonomous Multi-Agent Software System</p><p style="margin: 2px 0 0; font-size: 14px; color: #607187">MCA, NIT Tiruchirappalli</p>
+<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">01.05.2026 – 01.07.2026</p>
+</div>
+<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E3F3E6; color: #1F6B34; font-size: 12px; font-weight: 600; border-radius: 4px">Internal intern</span></div>
+</div>
+<div class="people-record" style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8; border-bottom: 1px solid #D5DDE8">
+<div style="flex: 1 1 300px; min-width: 0">
+<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Vignesh S</h4>
+<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Research project: Decentralized Federated Graph Learning with Topology-Induced Representational Drift Mitigation</p><p style="margin: 2px 0 0; font-size: 14px; color: #607187">M.Tech CSE, NIT Tiruchirappalli</p>
+<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">18.5.2026-18.7.2026</p>
+</div>
+<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E3F3E6; color: #1F6B34; font-size: 12px; font-weight: 600; border-radius: 4px">Internal intern</span></div>
+</div>
+</div>
 </div>
 </section>
+
+  
 
 <!-- ABOUT -->
 <section id="about" style="background: #FFFFFF; padding: 80px 0">
@@ -156,6 +384,46 @@ a:focus-visible{outline:3px solid #E8A33D;outline-offset:3px}
 </div>
 </section>
 
+<!-- STUDENT RESEARCH OUTCOMES -->
+<section id="outcomes" class="outcomes-section" aria-labelledby="outcomes-title">
+<div class="outcomes-wrap">
+<div class="outcomes-heading">
+<div>
+<div class="section-rule"></div>
+<p class="eyebrow">DATS Lab · Student research</p>
+<h2 id="outcomes-title">Conference outcomes</h2>
+<p class="outcomes-summary">Recent work extending trustworthy distributed systems into resilient IoT telemetry and privacy-preserving computational drug discovery.</p>
+</div>
+<div class="outcomes-total"><strong>03</strong><span>research outcomes</span></div>
+</div>
+<div class="outcomes-grid">
+<article id="outcome-shyam" class="outcome-card">
+<div class="outcome-topline"><span class="outcome-index">01</span><span class="outcome-domain">IoT · Blockchain · Consensus</span></div>
+<h3>PodWitness: A Physics-Informed Edge-Consensus Framework for Fault-Tolerant IoT Telemetry in Blockchain-Enabled Systems</h3>
+<p class="outcome-author">Shyam Sundar Raju</p>
+<div class="outcome-meta"><span class="meta-label">Conference</span><span>14th International Conference on Intelligent Systems and Embedded Design (ISED-2026)</span></div>
+<div class="outcome-meta"><span class="meta-label">Venue</span><span>National Institute of Technology Warangal</span></div>
+<div class="outcome-tags"><span>Physics-informed</span><span>Edge consensus</span><span>Fault tolerance</span></div>
+</article>
+<article id="outcome-devananditha" class="outcome-card">
+<div class="outcome-topline"><span class="outcome-index">02</span><span class="outcome-domain">Federated learning · Drug discovery</span></div>
+<h3>Failure-Aware Federated Link Prediction with Idempotent Ledger Persistence for Drug Discovery</h3>
+<p class="outcome-author">Devananditha</p>
+<div class="outcome-meta"><span class="meta-label">Conference</span><span>7th International Conference on Recent Advances in Information Technology</span></div>
+<div class="outcome-meta"><span class="meta-label">Venue</span><span>IIT (ISM) Dhanbad</span></div>
+<div class="outcome-tags"><span>Failure-aware</span><span>Link prediction</span><span>Idempotent persistence</span></div>
+</article>
+<article id="outcome-shiven" class="outcome-card">
+<div class="outcome-topline"><span class="outcome-index">03</span><span class="outcome-domain">P2P systems · Privacy · Drug discovery</span></div>
+<h3>A Fully Decentralized, Fault-Tolerant Peer-to-Peer Federated Learning Framework for Privacy-Preserving Drug Discovery</h3>
+<p class="outcome-author">Shiven Patro</p>
+<div class="outcome-meta"><span class="meta-label">Conference</span><span>7th International Conference on Recent Advances in Information Technology</span></div>
+<div class="outcome-meta"><span class="meta-label">Venue</span><span>IIT (ISM) Dhanbad</span></div>
+<div class="outcome-tags"><span>Decentralized learning</span><span>Fault tolerance</span><span>Privacy-preserving</span></div>
+</article>
+</div>
+</div>
+</section>
 <!-- PUBLICATIONS -->
 <section id="publications" style="background: #FFFFFF; padding: 80px 0">
 <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 32px 64px">
@@ -784,126 +1052,6 @@ a:focus-visible{outline:3px solid #E8A33D;outline-offset:3px}
 </div>
 </section>
 
-  <!-- MENTORING -->
-<section id="mentoring" style="background: #F2F5F9; padding: 80px 0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 32px 64px">
-<div style="flex: 1 1 220px; min-width: 0">
-<div style="width: 40px; height: 3px; margin-bottom: 16px; background: #E8A33D"></div>
-<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 36px; line-height: 1.15; color: #0B1F3A">Mentoring & DATS Lab</h2>
-<p style="margin: 12px 0 0; font-size: 15px; color: #4A5A70">Comprehensive roster of Ph.D. scholars, M.Tech scholars, and research interns mentored within the Decentralized AI and Trust Systems (DATS) Lab group and affiliated programs.</p>
-</div>
-<div style="flex: 3 1 520px; min-width: 0">
-<h3 style="margin: 0 0 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #4A5A70">Ph.D. Scholars</h3>
-<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding: 16px 0; border-top: 1px solid #D5DDE8">
-<div style="flex: 1 1 260px; min-width: 0; font-weight: 600; color: #0B1F3A">K J Shruthikeerthi (Roll No: 406126005) — Enrolled 2026</div>
-<span style="display: inline-block; padding: 4px 10px; background: #E1EEFB; color: #0F4C8A; font-size: 12px; font-weight: 600; border-radius: 4px">Ongoing</span>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding: 16px 0; border-top: 1px solid #D5DDE8; border-bottom: 1px solid #D5DDE8">
-<div style="flex: 1 1 260px; min-width: 0; font-weight: 600; color: #0B1F3A">Anusri P (Roll No: 406326001) — Enrolled 2026</div>
-<span style="display: inline-block; padding: 4px 10px; background: #E1EEFB; color: #0F4C8A; font-size: 12px; font-weight: 600; border-radius: 4px">Ongoing</span>
-</div>
-
-<h3 style="margin: 40px 0 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #4A5A70">P.G. Scholars</h3>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
-<div style="flex: 1 1 300px; min-width: 0">
-<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Fault Tolerant Decentralized Asynchronous Federated Learning with Ledger-Verifiable Termination</h4>
-<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Anoop Kumar (Roll No: 206124005)</p>
-</div>
-<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E3F3E6; color: #1F6B34; font-size: 12px; font-weight: 600; border-radius: 4px">Finished</span></div>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
-<div style="flex: 1 1 300px; min-width: 0">
-<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Intelligent Multi-objective and Preference-Aware LLVM Compiler Optimization via Hybrid Machine Learning and Graph-Enhanced Program Representations</h4>
-<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Satyam Singh Kumre (Roll No: 206124027)</p>
-</div>
-<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E3F3E6; color: #1F6B34; font-size: 12px; font-weight: 600; border-radius: 4px">Finished</span></div>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8; border-bottom: 1px solid #D5DDE8">
-<div style="flex: 1 1 300px; min-width: 0">
-<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Dynamic Federated Learning with Model Versioning and Efficient Client Unlearning</h4>
-<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Vignesh S (Roll No: 206125031)</p>
-</div>
-<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E1EEFB; color: #0F4C8A; font-size: 12px; font-weight: 600; border-radius: 4px">Ongoing</span></div>
-</div>
-<h3 style="margin: 40px 0 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #4A5A70">DATS Research Group Interns</h3>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
-<div style="flex: 1 1 300px; min-width: 0">
-<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">IoT security with Hyperledger Fabric</h4>
-<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Shyam Sundar Raju · School of Computing, Amrita Vishwa Vidyapeetham, Coimbatore</p>
-<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color:#4A5A70">18.05.2026 – 16.06.2026</p>
-</div>
-<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E6EDF7; color: #14407A; font-size: 12px; font-weight: 600; border-radius: 4px">External intern</span></div>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
-<div style="flex: 1 1 300px; min-width: 0">
-<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Decentralized Federated Learning for Drug Discovery</h4>
-<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Shiven Patro · Vellore Institute of Technology, Amaravati, Andhra Pradesh</p>
-<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">18.5.2026 – 21.6.2026</p>
-</div>
-<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E6EDF7; color: #14407A; font-size: 12px; font-weight: 600; border-radius: 4px">External intern</span></div>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
-<div style="flex: 1 1 300px; min-width: 0">
-<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Privacy enhancements in Peer-to-Peer Federated Learning</h4>
-<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Devananditha V · Vellore Institute of Technology, Amaravati, Andhra Pradesh</p>
-<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">18.5.2026 – 20.6.2026</p>
-</div>
-<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E6EDF7; color: #14407A; font-size: 12px; font-weight: 600; border-radius: 4px">External intern</span></div>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
-<div style="flex: 1 1 300px; min-width: 0">
-<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Decentralized Science (DeSci) with Blockchain</h4>
-<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Yaswant U · Chennai Institute of Technology, Chennai</p>
-<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">2 months · 04.05.2026 – 04.07.2026</p>
-</div>
-<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E6EDF7; color: #14407A; font-size: 12px; font-weight: 600; border-radius: 4px">External intern</span></div>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
-<div style="flex: 1 1 300px; min-width: 0">
-<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Fault Tolerance in Federated Machine Learning</h4>
-<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">RS Sreesudan · Chennai Institute of Technology, Chennai</p>
-<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">2 months · 04.05.2026 – 04.07.2026</p>
-</div>
-<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E6EDF7; color: #14407A; font-size: 12px; font-weight: 600; border-radius: 4px">External intern</span></div>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
-<div style="flex: 1 1 300px; min-width: 0">
-<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Personalized Federated RAG and Intent Learning for a Multilingual Railway Assistant under Non-IID Regional Data
-</h4>
-<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Gaurav Jaiswal · MCA, NIT Tiruchirappalli</p>
-<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">01.05.2026– 30.06.2026</p>
-</div>
-<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E3F3E6; color: #1F6B34; font-size: 12px; font-weight: 600; border-radius: 4px">Internal intern</span></div>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
-<div style="flex: 1 1 300px; min-width: 0">
-<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Web vulnerability scanner</h4>
-<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Devesh Kashyap · MCA, NIT Tiruchirappalli</p>
-<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">05.05.2026– 30.06.2026</p>
-</div>
-<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E3F3E6; color: #1F6B34; font-size: 12px; font-weight: 600; border-radius: 4px">Internal intern</span></div>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8">
-<div style="flex: 1 1 300px; min-width: 0">
-<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">CodeForge AI: Autonomous Multi-Agent Software System</h4>
-<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Priyansh Kumar Paswan · MCA, NIT Tiruchirappalli</p>
-<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">01.05.2026 – 01.07.2026</p>
-</div>
-<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E3F3E6; color: #1F6B34; font-size: 12px; font-weight: 600; border-radius: 4px">Internal intern</span></div>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid #D5DDE8; border-bottom: 1px solid #D5DDE8">
-<div style="flex: 1 1 300px; min-width: 0">
-<h4 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; line-height: 1.3; color: #0B1F3A">Decentralized Federated Graph Learning with Topology-Induced Representational Drift Mitigation</h4>
-<p style="margin: 4px 0 0; font-size: 15px; color: #4A5A70">Vignesh S · M.Tech CSE, NIT Tiruchirappalli</p>
-<p style="margin: 2px 0 0; font-size: 14px; font-weight: 600; color: #4A5A70">18.5.2026-18.7.2026</p>
-</div>
-<div style="flex: 0 0 auto"><span style="display: inline-block; padding: 4px 10px; background: #E3F3E6; color: #1F6B34; font-size: 12px; font-weight: 600; border-radius: 4px">Internal intern</span></div>
-</div>
-</div>
-</div>
-</section>
-
-  
 <!-- SERVICE -->
 <section id="service" style="background: #FFFFFF; padding: 80px 0">
 <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 32px 64px">
@@ -973,6 +1121,7 @@ a:focus-visible{outline:3px solid #E8A33D;outline-offset:3px}
 <p style="margin: 0 0 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #C9D6EA">Email</p>
 <p style="margin: 0; font-size: 18px"><a href="mailto:jchandrapriya@nitt.edu" style="color: #FFFFFF">jchandrapriya@nitt.edu</a></p>
 <p style="margin: 6px 0 0; font-size: 18px"><a href="mailto:jchandrapriya@gmail.com" style="color: #FFFFFF">jchandrapriya@gmail.com</a></p>
+<p style="margin: 12px 0 0; font-size: 16px"><a href="https://www.linkedin.com/in/dr-chandra-priya-jayabal-14555882/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" aria-label="Open CHANDRA PRIYA J on LinkedIn" style="color: #FFFFFF">LinkedIn profile ↗</a></p>
 <p style="margin: 28px 0 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #C9D6EA">Phone</p>
 <p style="margin: 0; font-size: 18px">0431 250 3220</p>
 </div>
